@@ -1,0 +1,28 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.3.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "@google-cloud/storage": "^6.10.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "@types/fluent-ffmpeg": "^2.1.21"
+  },
+  "private": true
+}
